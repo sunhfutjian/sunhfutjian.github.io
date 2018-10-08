@@ -3,7 +3,7 @@ title: Blog by ZERO
 SEOTitle: 鲁鲁修的博客
 header-img: img/post-bg-desk.jpg
 email: sunhfutjian@gmail.com
-description: "以梦为马"
+#description: "以梦为马"
 keyword: "孙健的博客, C++"
 url: "https://sunhfutjian.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -19,7 +19,7 @@ sidebar-avatar: /img/avatar_g.jpg      # use absolute URL, seeing it's used in b
 # SNS settings
 RSS: false
 weibo_username:     3767167502
-#zhihu_username:     qiubaiying
+zhihu_username:     ren-sheng-ruo-zhi-ru-chu-jian-2-85
 github_username:    sunhfutjian
 #facebook_username:  baiying.qiu.7
 #jianshu_username:   e71990ada2fd
@@ -85,7 +85,7 @@ gitalk:
 
 
 # Featured Tags
-featured-tags: true                     # 是否使用首页标签
+featured-tags: false                     # 是否使用首页标签
 featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 
 
