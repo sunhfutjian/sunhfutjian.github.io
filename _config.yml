@@ -99,7 +99,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WeiBo",
+        title: "Weibo",
         href: "https://weibo.com/u/3767167502/home"
     },{
         title: "Apple",
