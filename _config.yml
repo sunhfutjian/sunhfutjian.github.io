@@ -1,13 +1,13 @@
 # Site settings
-title: Blog by LLX
+title: Blog by ZERO
 SEOTitle: 鲁鲁修的博客
 header-img: img/post-bg-desk.jpg
 email: sunhfutjian@gmail.com
-description: "Stay Hungry Stay Foolish"
+description: "以梦为马"
 keyword: "孙健的博客, C++"
-url: "http://sunhfutjian.github.io"          # your host, for absolute URL
+url: "https://sunhfutjian.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-#github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/sunhfutjian/sunhfutjian.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -18,12 +18,12 @@ sidebar-avatar: /img/avatar_g.jpg      # use absolute URL, seeing it's used in b
 
 # SNS settings
 RSS: false
-weibo_username:     人生_若只如初健
+weibo_username:     3767167502
 #zhihu_username:     qiubaiying
 github_username:    sunhfutjian
 #facebook_username:  baiying.qiu.7
 #jianshu_username:   e71990ada2fd
-#twitter_username:   qiubaiying
+twitter_username:   sunhfutjian
 
 
 
@@ -61,11 +61,11 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
   repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
+  owner: sunhfutjian    #github用户名
   admin: qiubaiying
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
@@ -74,11 +74,11 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto #qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+# ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+# ga_domain: auto #qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
@@ -99,11 +99,8 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "WeiBo",
+        href: "https://weibo.com/u/3767167502/home"
     },{
         title: "Apple",
         href: "https://apple.com"
