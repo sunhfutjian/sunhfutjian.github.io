@@ -78,9 +78,6 @@ tags:
 
 ### 侧边栏
 
-看右边:
-![](https://raw.githubusercontent.com/qiubaiying/qiubaiying.github.io/master/img/readme-side.png)
-
 设置是在 `_config.yml`文件里面的`Sidebar settings`那块。
 
 ```
@@ -113,15 +110,13 @@ featured-condition-size: 1     # A tag will be featured if the size of it is mor
 
 ### Social-media Account
 
-在下面输入的社交账号，没有的添加的不会显示在侧边框中。新加入了[简书](https:/www.jianshu.com)链接, <http://www.jianshu.com/u/e71990ada2fd>
+在下面输入的社交账号，没有的添加的不会显示在侧边框中。
 
 	# SNS settings
 	RSS: false
-	jianshu_username: 	jianshu_id 
 	zhihu_username:     username
 	facebook_username:  username
 	github_username:    username
-	# weibo_username:   username
 	
 	
 
@@ -265,4 +260,3 @@ ga_domain: huangxuan.me			# 默认的是 auto, 这里我是自定义了的域名
 ## License
 
 遵循 MIT 许可证。有关详细,请参阅 [LICENSE](https://github.com/qiubaiying/qiubaiying.github.io/blob/master/LICENSE)。
-
