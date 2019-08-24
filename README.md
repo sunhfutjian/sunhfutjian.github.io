@@ -67,7 +67,7 @@ title:      定时器 你真的会使用吗？
 subtitle:   iOS定时器详解
 date:       2016-12-13
 author:     LLX
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-2019.jpg
 catalog: 	 true
 tags:
     - iOS
