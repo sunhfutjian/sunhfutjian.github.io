@@ -24,7 +24,7 @@ CTRL+H              # 删除光标左边的字符，同 <Backspace>
 CTRL+K              # 删除光标位置到行末的内容
 CTRL+L              # 清屏并重新显示
 CTRL+N              # 移动到命令历史的下一行，同 <Down>
-CTRL+O              # 类似回车，但是会显示下一行历史
+CTRL+O              # 类似回车，但是会显示一行历史
 CTRL+P              # 移动到命令历史的上一行，同 <Up>
 CTRL+R              # 历史命令反向搜索，使用 CTRL+G 退出搜索
 CTRL+S              # 历史命令正向搜索，使用 CTRL+G 退出搜索
@@ -39,9 +39,9 @@ CTRL+_              # 撤销（undo），有的终端将 CTRL+_ 映射为 CTRL+/
 ALT+b               # 向后（左边）移动一个单词
 ALT+d               # 删除光标后（右边）一个单词
 ALT+f               # 向前（右边）移动一个单词
-ALT+t               # 交换字符
+ALT+t               # 交换前后两个单词
 ALT+BACKSPACE       # 删除光标前面一个单词，类似 CTRL+W，但不影响剪贴板
-CTRL+X CTRL+X       # 连续按两次 CTRL+X，光标在当前位置和行首来回跳转 
+CTRL+X CTRL+X       # 连续按两次 CTRL+X，光标在当前位置和上一位置来回跳转 
 CTRL+X CTRL+E       # 用你指定的编辑器，编辑当前命令
 ```
 ### 基本操作
@@ -161,14 +161,8 @@ nohup {command} &         # 在后台长期运行某程序
 disown {PID|JID}          # 将进程从后台任务列表（jobs）移除
 wait                      # 等待所有后台进程任务结束
 ```
-### SSH / 系统信息 / 网络
+### 系统信息
 ```
-ssh user@host             # 以用户 user 登陆到远程主机 host
-ssh -p {port} user@host   # 指定端口登陆主机
-ssh-copy-id user@host     # 拷贝你的 ssh key 到远程主机，避免重复输入密码
-scp {fn} user@host:path   # 拷贝文件到远程主机
-scp user@host:path dest   # 从远程主机拷贝文件回来
-scp -P {port} ...         # 指定端口远程拷贝文件
 uname -a                  # 查看内核版本等信息
 man {help}                # 查看帮助
 man -k {keyword}          # 查看哪些帮助文档里包含了该关键字
@@ -184,30 +178,6 @@ du                        # 显示当前目录占用，du . --max-depth=2 可以
 uname                     # 显示系统版本号
 hostname                  # 显示主机名称
 showkey -a                # 查看终端发送的按键编码
-ping {host}               # ping 远程主机并显示结果，CTRL+C 退出
-ping -c N {host}          # ping 远程主机 N 次
-traceroute {host}         # 侦测路由连通情况
-mtr {host}                # 高级版本 traceroute
-host {domain}             # DNS 查询，{domain} 前面可加 -a 查看详细信息
-whois {domain}            # 取得域名 whois 信息
-dig {domain}              # 取得域名 dns 信息
-route -n                  # 查看路由表
-netstat -a                # 列出所有端口
-netstat -an               # 查看所有连接信息，不解析域名
-netstat -anp              # 查看所有连接信息，包含进程信息（需要 sudo）
-netstat -l                # 查看所有监听的端口
-netstat -t                # 查看所有 TCP 链接
-netstat -lntu             # 显示所有正在监听的 TCP 和 UDP 信息
-netstat -lntup            # 显示所有正在监听的 socket 及进程信息
-netstat -i                # 显示网卡信息
-netstat -rn               # 显示当前系统路由表，同 route -n
-ss -an                    # 比 netstat -an 更快速更详细
-ss -s                     # 统计 TCP 的 established, wait 等
-wget {url}                # 下载文件，可加 --no-check-certificate 忽略 ssl 验证
-wget -qO- {url}           # 下载文件并输出到标准输出（不保存）
-curl -sL {url}            # 同 wget -qO- {url} 没有 wget 的时候使用
-sz {file}                 # 发送文件到终端，zmodem 协议
-rz                        # 接收终端发送过来的文件
 ```
 ### 重定向
 ```
@@ -275,6 +245,23 @@ sort -u file                       # 去重排序
 ```
 ### 网络管理
 ```
+ping {host}               # ping 远程主机并显示结果，CTRL+C 退出
+ping -c N {host}          # ping 远程主机 N 次
+traceroute {host}         # 侦测路由连通情况
+mtr {host}                # 高级版本 traceroute
+host {domain}             # DNS 查询，{domain} 前面可加 -a 查看详细信息
+whois {domain}            # 取得域名 whois 信息
+dig {domain}              # 取得域名 dns 信息
+route -n                  # 查看路由表
+netstat -a                # 列出所有端口
+netstat -an               # 查看所有连接信息，不解析域名
+netstat -anp              # 查看所有连接信息，包含进程信息（需要 sudo）
+netstat -l                # 查看所有监听的端口
+netstat -t                # 查看所有 TCP 链接
+netstat -lntu             # 显示所有正在监听的 TCP 和 UDP 信息
+netstat -lntup            # 显示所有正在监听的 socket 及进程信息
+netstat -i                # 显示网卡信息
+netstat -rn               # 显示当前系统路由表，同 route -n
 ip a                               # 显示所有网络地址，同 ip address
 ip a show eth1                     # 显示网卡 IP 地址
 ip a add 172.16.1.23/24 dev eth1   # 添加网卡 IP 地址
