@@ -11,7 +11,7 @@ tags:
 ---
 
 ## Bash
-### 常用快捷键（默认使用 Emacs 键位）
+### 常用快捷键
 ```
 CTRL+A              # 移动到行首，同 <Home>
 CTRL+B              # 向后移动，同 <Left>
@@ -89,14 +89,13 @@ stat {fn}           # 显示文件的详细信息
 ### 用户管理
 ```
 whoami              # 显示我的用户名
-who                 # 显示已登陆用户信息，w / who / users 内容略有不同
 w                   # 显示已登陆用户信息，w / who / users 内容略有不同
+who                 # 显示已登陆用户信息，w / who / users 内容略有不同
 users               # 显示已登陆用户信息，w / who / users 内容略有不同
 passwd              # 修改密码，passwd {user} 可以用于 root 修改别人密码
 finger {user}       # 显示某用户信息，包括 id, 名字, 登陆状态等
 adduser {user}      # 添加用户
 deluser {user}      # 删除用户
-w                   # 查看谁在线
 su                  # 切换到 root 用户
 su -                # 切换到 root 用户并登陆（执行登陆脚本）
 su {user}           # 切换到某用户
@@ -116,17 +115,19 @@ sudo {command}      # 以 root 权限执行某命令
 uname -a                  # 查看内核版本等信息
 man {help}                # 查看帮助
 man -k {keyword}          # 查看哪些帮助文档里包含了该关键字
+man ascii                 # 显示 ascii 表
 info {help}               # 查看 info pages，比 man 更强的帮助系统
 uptime                    # 查看系统启动时间
 date                      # 显示日期
 cal                       # 显示日历
 vmstat                    # 显示内存和 CPU 使用情况
-vmstat 10                 # 每 10 秒打印一行内存和 CPU情况，CTRL+C 退出
 free                      # 显示内存和交换区使用情况
 df                        # 显示磁盘使用情况
 du                        # 显示当前目录占用，du . --max-depth=2 可以指定深度
 uname                     # 显示系统版本号
 hostname                  # 显示主机名称
+exit                      # 退出当前登陆
+env                       # 显示环境变量
 ```
 ### 重定向
 ```
@@ -144,7 +145,7 @@ n>&                                # 将标准输出 dup/合并 到文件描述�
 n<&                                # 将标准输入 dump/合并 定向为描述符 n
 n>&m                               # 文件描述符 n 被作为描述符 m 的副本，输出用
 n<&m                               # 文件描述符 n 被作为描述符 m 的副本，输入用
-&>file                             # 将标准输出和标准错误重定向到文件
+&> file                            # 将标准输出和标准错误重定向到文件
 <&-                                # 关闭标准输入
 >&-                                # 关闭标准输出
 n>&-                               # 关闭作为输出的文件描述符 n
@@ -159,14 +160,11 @@ cut -c3-                           # 截取每行从第三个字符开始到行�
 cut -d':' -f5                      # 截取用冒号分隔的第五列内容
 cut -d';' -f2,10                   # 截取用分号分隔的第二和第十列内容
 cut -d' ' -f3-7                    # 截取空格分隔的三到七列
-echo "hello" | cut -c1-3           # 显示 hel
-echo "hello sir" | cut -d' ' -f2   # 显示 sir
-ps | tr -s " " | cut -d " " -f 2,3,4  # cut 搭配 tr 压缩字符
 awk '{print $5}' file              # 打印文件中以空格分隔的第五列
 awk -F ',' '{print $5}' file       # 打印文件中以逗号分隔的第五列
 awk '/str/ {print $2}' file        # 打印文件中包含 str 的所有行的第二列
 awk -F ',' '{print $NF}' file      # 打印逗号分隔的文件中的每行最后一列 
-awk '{s+=$1} END {print s}' file   # 计算所有第一列的合
+awk '{s+=$1} END {print s}' file   # 计算所有第一列的和
 awk 'NR%3==1' file                 # 从第一行开始，每隔三行打印一行
 sed 's/find/replace/' file         # 替换文件中首次出现的字符串并输出结果 
 sed '10s/find/replace/' file       # 替换文件第 10 行内容
@@ -175,20 +173,12 @@ sed -r 's/regex/replace/g' file    # 替换文件中所有出现的字符串
 sed -i 's/find/replace/g' file     # 替换文件中所有出现的字符并且覆盖文件
 sed -i '/find/i\newline' file      # 在文件的匹配文本前插入行
 sed -i '/find/a\newline' file      # 在文件的匹配文本后插入行
-sed '/line/s/find/replace/' file   # 先搜索行特征再执行替换
-sed -e 's/f/r/' -e 's/f/r' file    # 执行多次替换
 sed 's#find#replace#' file         # 使用 # 替换 / 来避免 pattern 中有斜杆
 sed -i -r 's/^\s+//g' file         # 删除文件每行头部空格
 sed '/^$/d' file                   # 删除文件空行并打印
 sed -i 's/\s\+$//' file            # 删除文件每行末尾多余空格
 sed -n '2p' file                   # 打印文件第二行
 sed -n '2,5p' file                 # 打印文件第二到第五行
-```
-### 其他常用命令
-```
-exit                # 退出当前登陆
-env                 # 显示环境变量
-man ascii                          # 显示 ascii 表
 ```
 
 ## Vim
