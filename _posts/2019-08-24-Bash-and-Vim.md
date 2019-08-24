@@ -11,8 +11,8 @@ tags:
 ---
 
 ## Bash
+###常用快捷键（默认使用 Emacs 键位）
 ```
-常用快捷键（默认使用 Emacs 键位）
 CTRL+A              # 移动到行首，同 <Home>
 CTRL+B              # 向后移动，同 <Left>
 CTRL+C              # 结束当前命令
@@ -43,7 +43,9 @@ ALT+t               # 交换字符
 ALT+BACKSPACE       # 删除光标前面一个单词，类似 CTRL+W，但不影响剪贴板
 CTRL+X CTRL+X       # 连续按两次 CTRL+X，光标在当前位置和行首来回跳转 
 CTRL+X CTRL+E       # 用你指定的编辑器，编辑当前命令
-BASH 基本操作
+```
+###BASH 基本操作
+```
 exit                # 退出当前登陆
 env                 # 显示环境变量
 echo $SHELL         # 显示你在使用什么 SHELL
@@ -53,7 +55,9 @@ whereis bash        # 搜索可执行，头文件和帮助信息的位置，使�
 whatis bash         # 查看某个命令的解释，一句话告诉你这是干什么的
 clear               # 清初屏幕内容
 reset               # 重置终端（当你不小心 cat 了一个二进制，终端状态乱掉时使用）
-目录操作
+```
+###目录操作
+```
 cd                  # 返回自己 $HOME 目录
 cd {dirname}        # 进入目录
 pwd                 # 显示当前所在目录
@@ -93,7 +97,9 @@ dirname {fn}        # 查看文件的路径（不包括名字）
 grep {pat} {fn}     # 在文件中查找出现过 pat 的内容
 grep -r {pat} .     # 在当前目录下递归查找所有出现过 pat 的文件内容
 stat {fn}           # 显示文件的详细信息
-用户管理
+```
+###用户管理
+```
 whoami              # 显示我的用户名
 who                 # 显示已登陆用户信息，w / who / users 内容略有不同
 w                   # 显示已登陆用户信息，w / who / users 内容略有不同
@@ -116,7 +122,9 @@ last {user}         # 显示登陆记录
 lastb               # 显示失败登陆记录
 lastlog             # 显示所有用户的最近登陆记录
 sudo {command}      # 以 root 权限执行某命令
-进程管理
+```
+###进程管理
+```
 ps                        # 查看当前会话进程
 ps ax                     # 查看所有进程，类似 ps -e
 ps aux                    # 查看所有进程详细信息，类似 ps -ef
@@ -152,7 +160,9 @@ nohup {command}           # 长期运行某程序，在你退出登陆都保持�
 nohup {command} &         # 在后台长期运行某程序
 disown {PID|JID}          # 将进程从后台任务列表（jobs）移除
 wait                      # 等待所有后台进程任务结束
-常用命令：SSH / 系统信息 / 网络
+```
+###常用命令：SSH / 系统信息 / 网络
+```
 ssh user@host             # 以用户 user 登陆到远程主机 host
 ssh -p {port} user@host   # 指定端口登陆主机
 ssh-copy-id user@host     # 拷贝你的 ssh key 到远程主机，避免重复输入密码
@@ -198,7 +208,9 @@ wget -qO- {url}           # 下载文件并输出到标准输出（不保存）
 curl -sL {url}            # 同 wget -qO- {url} 没有 wget 的时候使用
 sz {file}                 # 发送文件到终端，zmodem 协议
 rz                        # 接收终端发送过来的文件
-输出/输入 重定向
+```
+###输出/输入 重定向
+```
 cmd1 | cmd2                        # 管道，cmd1 的标准输出接到 cmd2 的标准输入
 < file                             # 将文件内容重定向为命令的标准输入
 > file                             # 将命令的标准输出重定向到文件，会覆盖文件
@@ -219,7 +231,9 @@ n<&m                               # 文件描述符 n 被作为描述符 m 的�
 n>&-                               # 关闭作为输出的文件描述符 n
 n<&-                               # 关闭作为输入的文件描述符 n
 diff <(cmd1) <(cmd2)               # 比较两个命令的输出
-文本处理 - cut
+```
+###文本处理 - cut / awk / sed
+```
 cut -c 1-16                        # 截取每行头16个字符
 cut -c 1-16 file                   # 截取指定文件中每行头 16个字符
 cut -c3-                           # 截取每行从第三个字符开始到行末的内容
@@ -229,7 +243,6 @@ cut -d' ' -f3-7                    # 截取空格分隔的三到七列
 echo "hello" | cut -c1-3           # 显示 hel
 echo "hello sir" | cut -d' ' -f2   # 显示 sir
 ps | tr -s " " | cut -d " " -f 2,3,4  # cut 搭配 tr 压缩字符
-文本处理 - awk / sed 
 awk '{print $5}' file              # 打印文件中以空格分隔的第五列
 awk -F ',' '{print $5}' file       # 打印文件中以逗号分隔的第五列
 awk '/str/ {print $2}' file        # 打印文件中包含 str 的所有行的第二列
@@ -251,13 +264,17 @@ sed '/^$/d' file                   # 删除文件空行并打印
 sed -i 's/\s\+$//' file            # 删除文件每行末尾多余空格
 sed -n '2p' file                   # 打印文件第二行
 sed -n '2,5p' file                 # 打印文件第二到第五行
-排序 - sort
+```
+###排序 - sort
+```
 sort file                          # 排序文件
 sort -r file                       # 反向排序（降序）
 sort -n file                       # 使用数字而不是字符串进行比较
 sort -t: -k 3n /etc/passwd         # 按 passwd 文件的第三列进行排序
 sort -u file                       # 去重排序
-网络管理：ip / ifconfig / nmap
+```
+###网络管理：ip / ifconfig / nmap
+```
 ip a                               # 显示所有网络地址，同 ip address
 ip a show eth1                     # 显示网卡 IP 地址
 ip a add 172.16.1.23/24 dev eth1   # 添加网卡 IP 地址
@@ -282,7 +299,9 @@ nmap 10.0.0.12                     # 扫描主机 1-1000 端口
 nmap -p 1024-65535 10.0.0.12       # 扫描给定端口
 nmap 10.0.0.0/24                   # 给定网段扫描局域网内所有主机
 nmap -O -sV 10.0.0.12              # 探测主机服务和操作系统版本
-有趣的命令
+```
+###有趣的命令
+```
 man hier                           # 查看文件系统的结构和含义
 man test                           # 查看 posix sh 的条件判断帮助
 man ascii                          # 显示 ascii 表
@@ -310,8 +329,8 @@ curl -L cheat.sh                   # 速查表大全
 ```
 
 ## Vim
+###光标移动
 ```
-光标移动
 h                   光标左移，同 <Left> 键
 j                   光标下移，同 <Down> 键
 k                   光标上移，同 <Up> 键
@@ -359,7 +378,9 @@ Tx                  跳转到上一个为 x 的字符前
 gm                  移动到行中
 gj                  光标下移一行（忽略自动换行）
 gk                  光标上移一行（忽略自动换行）
-插入模式：进入退出
+```
+###插入模式：进入退出
+```
 i                   在光标处进入插入模式
 I                   在行首进入插入模式
 a                   在光标后进入插入模式
@@ -385,7 +406,9 @@ INSERT MODE - 由 i, I, a, A, o, O 等命令进入插入模式后
 <Home>              光标跳转行首
 <End>               光标跳转行尾
 CTRL-W              向后删除单词
-文件操作
+```
+###文件操作
+```
 :w                  保存文件
 :w <filename>       按名称保存文件
 :e <filename>       打开文件并编辑
@@ -402,7 +425,9 @@ CTRL-W              向后删除单词
 :enew               在当前窗口创建新文件
 :vnew               在左右切分的新窗口中编辑新文件
 :tabnew             在新的标签页中编辑新文件
-帮助信息
+```
+###帮助信息
+```
 :h tutor            入门文档
 :h quickref         快速帮助
 :h index            查询 Vim 所有键盘命令定义
