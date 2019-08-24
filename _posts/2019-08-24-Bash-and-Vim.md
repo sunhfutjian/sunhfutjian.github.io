@@ -275,4 +275,4 @@ CTRL-[              退出插入模式（同 ESC 等价，但更顺手）
 ```
 
 ## References
-For more information, please refer to the [Bash Cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/languages/bash.sh "Bash速查表") and [Vim cCheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt "Vim速查表")
+For more information, please refer to the [Bash Cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/languages/bash.sh "Bash速查表") and [Vim Cheatsheet](https://github.com/skywind3000/awesome-cheatsheets/blob/master/editors/vim.txt "Vim速查表").
