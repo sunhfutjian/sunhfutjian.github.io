@@ -1,6 +1,6 @@
 ---
 layout:		post
-title:		学习资料
+title:		Git and Markdown
 subtitle:	My First Blog
 date:		2018-10-24
 author:		LLX
