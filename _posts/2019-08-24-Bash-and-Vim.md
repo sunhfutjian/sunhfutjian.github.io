@@ -4,7 +4,7 @@ title:		Bash and Vim
 subtitle:	常用指令和快捷键
 date:		2019-08-24
 author:		LLX
-header-img:	img/post-bg-2015.png
+header-img:	img/post-bg-2015.jpg
 catalog:	true
 tags:
     - Linux
