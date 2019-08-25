@@ -14,6 +14,7 @@ tags:
 
 ### Windows
 - [Chrome](https://www.google.cn/chrome/)　[Firefox](https://www.firefox.com.cn/)
+- [Visual Studio](https://visualstudio.microsoft.com/zh-hans/vs/)　[IntelliJ IDEA](https://www.jetbrains.com/idea/)
 - [VS Code](https://code.visualstudio.com/)
 - [Bandizip](https://cn.bandisoft.com/bandizip/)
 - [Everything](https://www.voidtools.com/)
