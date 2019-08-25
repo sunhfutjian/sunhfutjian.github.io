@@ -45,7 +45,7 @@ CTRL+X CTRL+X       连续按两次 CTRL+X，光标在当前位置和上一位�
 CTRL+X CTRL+E       用你指定的编辑器，编辑当前命令
 ```
 ### 目录操作
-```bash
+```
 cd                  返回自己 $HOME 目录
 cd {dirname}        进入目录
 pwd                 显示当前所在目录
