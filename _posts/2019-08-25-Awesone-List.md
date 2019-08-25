@@ -23,9 +23,15 @@ tags:
 
 ### iPhone
 - Chrome
+- Gmail
+- Instagram
+- SofaScore
+- Douban
 
 ### iPad
 - Chrome
 - nPlayer
+- Bilibili
 
 ### Mac
+- Chrome
