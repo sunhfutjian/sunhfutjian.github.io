@@ -13,7 +13,10 @@ tags:
 ## Awesome Lists
 
 ### Windows
-- [Chrome](https://www.google.cn/chrome/) [Firefox](https://www.firefox.com.cn/)
+- [Chrome](https://www.google.cn/chrome/)　[Firefox](https://www.firefox.com.cn/)
+- [VS Code](https://code.visualstudio.com/)
+- [Bandizip](https://cn.bandisoft.com/bandizip/)
+- [Everything](https://www.voidtools.com/)
 - [Potplayer](https://daumpotplayer.com/)
 
 ### Linux
