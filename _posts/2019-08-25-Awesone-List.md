@@ -24,14 +24,19 @@ tags:
 
 ### iPhone
 - Chrome
-- Gmail
-- Instagram
+- Gmail 
+- Google Translate Drive Photos
 - SofaScore
+- Instagram
+- Snapchat
 - Douban
 
 ### iPad
 - Chrome
 - nPlayer
+- Facebook
+- Twitter
+- YouTube
 - Bilibili
 
 ### Mac
