@@ -19,6 +19,7 @@ tags:
 - [Bandizip](https://cn.bandisoft.com/bandizip/)
 - [Everything](https://www.voidtools.com/)
 - [Potplayer](https://daumpotplayer.com/)
+- [PanDownload](http://pandownload.com/)
 
 ### Linux
 
@@ -29,6 +30,7 @@ tags:
 - SofaScore
 - Instagram
 - Snapchat
+- Shadowrocket
 - Douban
 
 ### iPad
