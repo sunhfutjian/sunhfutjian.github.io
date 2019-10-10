@@ -34,6 +34,7 @@ tags:
 - Shadowrocket
 - Douban
 - OneDrive
+- Office Lens
 
 ### iPad
 - Chrome
