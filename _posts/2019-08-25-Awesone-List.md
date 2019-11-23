@@ -46,3 +46,5 @@ tags:
 
 ### Mac
 - Chrome
+- Firefox
+- IINA
