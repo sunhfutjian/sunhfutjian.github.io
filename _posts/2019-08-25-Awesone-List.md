@@ -45,9 +45,9 @@ tags:
 - Bilibili
 
 ### Mac
-- Homebrew
+- [Homebrew](https://brew.sh/)
 - iTerm2
-- Oh My Zsh
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - Chrome
 - Firefox
 - IINA
