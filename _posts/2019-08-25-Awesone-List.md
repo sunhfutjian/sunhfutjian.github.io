@@ -30,6 +30,7 @@ tags:
 - Google Translate Drive Photos
 - SofaScore
 - Instagram
+- Twitter
 - Snapchat
 - Shadowrocket
 - Douban
@@ -40,7 +41,6 @@ tags:
 - Chrome
 - nPlayer
 - Facebook
-- Twitter
 - YouTube
 - Bilibili
 
